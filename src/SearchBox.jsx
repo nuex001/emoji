@@ -10,7 +10,7 @@ function SearchBox({ emojis }) {
   const [filteredRes, setFilteredRes] = useState();
   useEffect(() => {
     const results = emojis.filter((emoji) =>
-      emoji.name.toLowerCase().includes(name)
+      emoji.name.toLowerCase().includes(name.toLowerCase())
     );
     setFilteredRes(results);
   }, [navigate]);
